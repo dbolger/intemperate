@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+   <dict>
+      <key>items</key>
+      <array>
+         <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>label</key>
+            <string>Settings</string>
+            <key>footerText</key>
+            <string>By enabling this tweak, your device will be running in an unstable state. Using your device above operating temperatures can lead to permanent damage.</string>
+         </dict>
+         <dict>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>default</key>
+            <false />
+            <key>defaults</key>
+            <string>com.5px.intemperate</string>
+            <key>key</key>
+            <string>isEnabled</string>
+            <key>label</key>
+            <string>Enabled</string>
+         </dict>
+         <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>footerText</key>
+            <string>Perform a respring to apply all changes.</string>
+         </dict>
+         <dict>
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>label</key>
+            <string>Respring Device</string>
+            <key>action</key>
+            <string>respring</string>
+         </dict>
+         <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>label</key>
+            <string>Support</string>
+            <key>footerText</key>
+            <string>If you have any issues with this tweak, describe your issue and I'll try to assist you in the best way possible!</string>
+         </dict>
+         <dict>
+            <key>action</key>
+            <string>openTwitterDM</string>
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>label</key>
+            <string>DM @o5pxels on Twitter</string>
+            <key>icon</key>
+            <string>twitter.png</string>
+         </dict>
+         <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>label</key>
+            <string>Credits</string>
+         </dict>
+         <dict>
+            <key>action</key>
+            <string>openTwitter5px</string>
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>label</key>
+            <string>@o5pxels</string>
+            <key>footerText</key>
+            <string>Developer</string>
+         </dict>
+         <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>footerAlignment</key>
+            <integer>1</integer>
+            <key>footerText</key>
+            <string>© 2020 FivePixels</string>
+         </dict>
+      </array>
+      <key>title</key>
+      <string>Intemperate</string>
+   </dict>
+</plist>
+
+
