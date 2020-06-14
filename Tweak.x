@@ -1,6 +1,7 @@
 static BOOL isEnabled;
 
 @interface SBThermalController : NSObject {
+
 }
 @property (nonatomic,readonly) long long level;
 @property (getter=isInSunlight,nonatomic,readonly) BOOL inSunlight;
@@ -18,8 +19,7 @@ static void updatePrefs() {
 
 %group latestSyntax
 %hook SBThermalController
--(void)startListeningForThermalEvents {
-}
+
 -(void)_setBlocked:(BOOL)arg1 {
 	arg1 = NO;
 	%orig(arg1);
@@ -41,17 +41,8 @@ static void updatePrefs() {
 
 %group previousSyntax
 %hook SBThermalController
--(void)respondToCurrentThermalCondition {
-}
 -(void)showThermalAlertIfNecessary {
-}
--(BOOL)isInSunlight {
-	%orig;
-	return NO;
-}
--(int)level {
-	%orig;
-	return 0;
+	// Do nothing. I don't want a thermal alert.
 }
 %end
 %end
@@ -61,10 +52,8 @@ static void updatePrefs() {
 	if (isEnabled) {
 		float version = [[[UIDevice currentDevice] systemVersion] floatValue];
 		if (version >= 10) {
-			NSLog(@"Intemperate - iOS 10+");
 			%init(latestSyntax);
 		} else if (version >= 8 && version < 10) {
-			NSLog(@"Intemperate - iOS 8/9");
 			%init(previousSyntax);
 		}
 	}
