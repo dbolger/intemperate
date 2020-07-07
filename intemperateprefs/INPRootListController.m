@@ -19,7 +19,7 @@
         posix_spawn(&pid, "/usr/bin/sbreload", NULL, NULL, (char* const*)args, NULL);
 }
 -(void)openTwitterDM {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/messages/compose?recipient_id=974524608949903361&text=%28Please+describe+your+issue+here%29"] options:@{} completionHandler:nil];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/messages/compose?recipient_id=765771568337264641&text=%28Please+describe+your+issue+here%29"] options:@{} completionHandler:nil];
 }
 -(void)openTwitter5px {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/o5pxels"] options:@{} completionHandler:nil];

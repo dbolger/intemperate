@@ -19,15 +19,16 @@ static void updatePrefs() {
 
 %group latestSyntax
 %hook SBThermalController
-
 -(void)_setBlocked:(BOOL)arg1 {
+	UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Intemperate" message:@"Your device attempted to lockout your device due to it's thermal monitoring. Proceed with caution." preferredStyle:UIAlertControllerStyleAlert];
+	UIAlertAction *close = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+	}];
+	[alert addAction:close];
+	[[[UIApplication sharedApplication] keyWindow].rootViewController presentViewController:alert animated:YES completion:nil];
 	arg1 = NO;
 	%orig(arg1);
 }
 -(BOOL)isThermalBlocked {
-	return NO;
-}
--(BOOL)_isBlocked {
 	return NO;
 }
 -(BOOL)isInSunlight {
